@@ -24,6 +24,7 @@ return `
 const galleryEl = document.querySelector('.gallery');
 galleryEl.innerHTML = imgItems;
 
+
 galleryEl.addEventListener('click', onGalleryItemsClick);
 
 function onGalleryItemsClick(evt){
@@ -38,8 +39,18 @@ const instance = basicLightbox.create(`
     <img src="${evt.target.dataset.source}" >
 `)
 
-instance.show()
+instance.show();
+instance.close();
 
 
 
 }
+
+
+
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape') {
+//ваша функция закрытия окна
+instance.close();
+}
+}); 
