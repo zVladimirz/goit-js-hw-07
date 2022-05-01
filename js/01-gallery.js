@@ -26,6 +26,7 @@ galleryEl.innerHTML = imgItems;
 
 
 galleryEl.addEventListener('click', onGalleryItemsClick);
+let instance;
 
 function onGalleryItemsClick(evt){
   event.preventDefault();
@@ -35,12 +36,11 @@ return;
 }
 console.log(evt.target.dataset.source);
 
-const instance = basicLightbox.create(`
+instance = basicLightbox.create(`
     <img src="${evt.target.dataset.source}" >
 `)
 
 instance.show();
-instance.close();
 
 
 
