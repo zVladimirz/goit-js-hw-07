@@ -21,6 +21,17 @@ return `
 })
 .join('');
 
+
+    function onEscape(event) {
+if (e.key === 'Escape') {
+//ваша функция закрытия окна
+//document.removeEventListener('keydown',onEscape ); 
+instance.close();
+}
+    }
+
+
+
 const galleryEl = document.querySelector('.gallery');
 galleryEl.innerHTML = imgItems;
 
@@ -47,13 +58,5 @@ instance.show();
 
 
 }
-
-    function onEscape(event) {
-if (e.key === 'Escape') {
-//ваша функция закрытия окна
-//document.removeEventListener('keydown',onEscape ); 
-instance.close();
-}
-    }
 
 
