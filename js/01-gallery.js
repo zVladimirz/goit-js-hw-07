@@ -51,7 +51,7 @@ instance.show();
     function onEscape(event) {
 if (e.key === 'Escape') {
 //ваша функция закрытия окна
-document.removeEventListener('keydown',onEscape ); 
+//document.removeEventListener('keydown',onEscape ); 
 instance.close();
 }
     }
