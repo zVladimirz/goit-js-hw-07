@@ -45,7 +45,7 @@ function onGalleryItemsClick(evt){
 if (!evt.target.classList.contains('gallery__image')) {
 return;
 }
-console.log(evt.target.dataset.source);
+
 
 instance = basicLightbox.create(`
     <img src="${evt.target.dataset.source}" >
