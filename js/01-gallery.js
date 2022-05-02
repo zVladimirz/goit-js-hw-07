@@ -54,3 +54,4 @@ instance.close();
     }
 
 document.addEventListener('keydown',onEscape ); 
+document.removeEventListener('keydown',onEscape ); 
