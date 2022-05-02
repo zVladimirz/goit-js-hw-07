@@ -46,11 +46,11 @@ instance.show();
 
 }
 
-
-
-document.addEventListener('keydown', function(e) {
+    function onEscape(event) {
 if (e.key === 'Escape') {
 //ваша функция закрытия окна
 instance.close();
 }
-}); 
+    }
+
+document.addEventListener('keydown',onEscape ); 
