@@ -40,6 +40,8 @@ instance = basicLightbox.create(`
     <img src="${evt.target.dataset.source}" >
 `)
 
+document.addEventListener('keydown',onEscape ); 
+
 instance.show();
 
 
@@ -49,9 +51,9 @@ instance.show();
     function onEscape(event) {
 if (e.key === 'Escape') {
 //ваша функция закрытия окна
+document.removeEventListener('keydown',onEscape ); 
 instance.close();
 }
     }
 
-document.addEventListener('keydown',onEscape ); 
-document.removeEventListener('keydown',onEscape ); 
+
