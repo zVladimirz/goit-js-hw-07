@@ -31,3 +31,4 @@ galleryEl.innerHTML = imgItems;
 
 let lightbox = new SimpleLightbox('.gallery a', {});
 
+console.log(lightbox.captions)
