@@ -29,5 +29,5 @@ const galleryEl = document.querySelector('.gallery');
 galleryEl.innerHTML = imgItems;
 
 
-let lightbox = new SimpleLightbox('.gallery a',{captionDelay:5000});
+let lightbox = new SimpleLightbox('.gallery a',{captionsData: "alt", captionDelay:5000});
 
