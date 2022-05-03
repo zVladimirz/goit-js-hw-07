@@ -3,7 +3,7 @@ import { galleryItems } from './gallery-items.js';
 
 console.log(galleryItems);
 
-const lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+
 
 
 
@@ -29,3 +29,4 @@ const galleryEl = document.querySelector('.gallery');
 galleryEl.innerHTML = imgItems;
 
 
+const lightbox = new SimpleLightbox('.gallery a', {});
