@@ -3,10 +3,9 @@ import { galleryItems } from './gallery-items.js';
 
 console.log(galleryItems);
 
-
 const imgItems = galleryItems
-.map (({preview,original,description}) => {
-return `
+  .map(({ preview, original, description }) => {
+    return `
 <div class="gallery__item">
   <a class="gallery__link" href="large-image.jpg">
     <img
@@ -18,45 +17,35 @@ return `
   </a>
 </div>
 `;
-})
-.join('');
+  })
+  .join('');
 
-
-    function onEscape(event) {
-if (event.key === 'Escape') {
-//ваша функция закрытия окна
-document.removeEventListener('keydown',onEscape ); 
-instance.close();
+function onEscape(event) {
+  if (event.key === 'Escape') {
+    //пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+    document.removeEventListener('keydown', onEscape);
+    instance.close();
+  }
 }
-    }
-
-
 
 const galleryEl = document.querySelector('.gallery');
 galleryEl.innerHTML = imgItems;
 
-
 galleryEl.addEventListener('click', onGalleryItemsClick);
 let instance;
 
-function onGalleryItemsClick(evt){
+function onGalleryItemsClick(evt) {
   event.preventDefault();
 
-if (!evt.target.classList.contains('gallery__image')) {
-return;
-}
+  if (!evt.target.classList.contains('gallery__image')) {
+    return;
+  }
 
-
-instance = basicLightbox.create(`
+  instance = basicLightbox.create(`
     <img src="${evt.target.dataset.source}" >
-`)
+`);
 
-document.addEventListener('keydown',onEscape ); 
+  document.addEventListener('keydown', onEscape);
 
-instance.show();
-
-
-
+  instance.show();
 }
-
-
