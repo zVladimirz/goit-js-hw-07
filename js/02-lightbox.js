@@ -29,4 +29,5 @@ const galleryEl = document.querySelector('.gallery');
 galleryEl.innerHTML = imgItems;
 
 
-const lightbox = new SimpleLightbox('.gallery a', {});
+let lightbox = new SimpleLightbox('.gallery a', {});
+
